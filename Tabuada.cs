@@ -1,9 +1,5 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-namespace ConsoleApplication1{
+namespace Tabuada{
     class Program{
         static void Main(string[] args){
             Console.WriteLine("\nTABUADA MULTIPLICAÇÃO\n");
