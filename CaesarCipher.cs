@@ -16,7 +16,7 @@ namespace CifraDeCesar{
 		static void Main(string[] args){
 			int i=0;
 			while (i<1){
-				Console.Write("\n 1- Criptografar\n 2- Descriptografar\n 0- Sair\n\nEscolha uma opção: ");//Menu
+				Console.Write("\n 1- Criptografar\n 2- Descriptografar\n 3- Força Bruta\n 0- Sair\n\nEscolha uma opção: ");//Menu
 				int o= int.Parse(Console.ReadLine());
 				switch (o){
 					case 1:
@@ -43,8 +43,19 @@ namespace CifraDeCesar{
 						Console.ReadKey();
 						Console.Clear();
 						break;
-					case 0:
-						i++;
+					case 3:
+						Console.WriteLine("\nTexto a ser Descriptografado por Força Bruta:");
+						string Text3 = Console.ReadLine();
+						int cont = 0;
+						Console.WriteLine("\nTentativas:");
+						while (cont++<26){
+							int key3 = Convert.ToInt32(cont);
+							string fb = Descripto(Text3, key3);
+							Console.Write($"{cont}ª:\t{fb}\n");
+						}
+						Console.Write("\nDigite qualquer tecla para voltar para o menu.");
+						Console.ReadKey();
+						Console.Clear();
 						break;
 					default:
 						i++;
